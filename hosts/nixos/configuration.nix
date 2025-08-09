@@ -107,6 +107,7 @@
     hyprpaper
     waybar
     kitty
+    wofi
     dunst
     libnotify # dunst dependency
   ];

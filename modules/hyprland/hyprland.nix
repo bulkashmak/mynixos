@@ -3,9 +3,9 @@
   monitor = [ "eDP-1,1920x1080@60,0x0,1" ];
 
   # Apps
-  terminal = "kitty";
-  fileManager = "dolphin";
-  menu = "wofi --show drun";
+  # terminal = "kitty";
+  # fileManager = "dolphin";
+  # menu = "wofi --show drun";
 
   # Autostart
   exec-once = [
@@ -94,19 +94,19 @@
   };
 
   # Key bindings
-  mainMod = "SUPER";
+  # mainMod = "SUPER";
 
   bind = [
-    "${mainMod}, E, exec, ${terminal}"
-    "${mainMod}, F, exec, ${fileManager}"
-    "${mainMod}, SPACE, exec, ${menu}"
+    "SUPER, E, exec, kitty"
+    "SUPER, F, exec, dolphin"
+    "SUPER, SPACE, exec, wofi --show drun"
 
-    "${mainMod}, Q, killactive,"
-    "${mainMod}, V, togglefloating,"
+    "SUPER, Q, killactive,"
+    "SUPER, V, togglefloating,"
   ];
 
   bindm = [
-    "${mainMod}, mouse:272, movewindow"
-    "${mainMod}, mouse:273, resizewindow"
+    "SUPER, mouse:272, movewindow"
+    "SUPER, mouse:273, resizewindow"
   ];
 }

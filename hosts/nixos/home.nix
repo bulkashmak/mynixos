@@ -98,6 +98,7 @@ in {
   #  /etc/profiles/per-user/bulat/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    HYPRSHOT_DIR = "/home/bulat/pictures/screenshots";
     # EDITOR = "emacs";
   };
 

@@ -27,6 +27,7 @@
   exec-once = [
     "waybar"
     "hyprpaper"
+    "hypridle"
   ];
 
  
@@ -176,7 +177,7 @@
     # Apps
     "SUPER, E, exec, ghostty"
     "SUPER, F, exec, dolphin"
-    "SUPER, SPACE, exec, wofi --show drun"
+    "SUPER, SPACE, exec, wofi --show drun --allow-images"
 
     "$SUPER_SHIFT, L, exec, hyprlock"
 

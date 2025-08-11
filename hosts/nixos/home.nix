@@ -43,6 +43,7 @@ in {
     stylua
 
     nerd-fonts.jetbrains-mono
+    whitesur-icon-theme
 
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.

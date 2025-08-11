@@ -102,15 +102,30 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    stow
 
     hyprland
     hyprpaper
+    hypridle
+    hyprlock
+    hyprshot
     waybar
     kitty
     wofi
     dunst
     libnotify # dunst dependency
+
+    brightnessctl
+    playerctl
+
+    nerd-fonts.jetbrains-mono
+
+    gcc
+    gnumake
   ];
+
+  # Allow dlls for mason
+  programs.nix-ld.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

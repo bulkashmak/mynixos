@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  hyprlandConf = import ../../modules/hyprland/hyprland.nix;
+  hyprlandConf = import ./../../modules/hyprland/hyprland.nix;
 in {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -20,7 +20,19 @@ in {
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    # Apps GUI
+    ghostty
+    nautilus
     google-chrome # unfree
+
+    # Apps CLI
+    neovim
+    starship
+    yazi
+    dragon-drop
+
+    # Services
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

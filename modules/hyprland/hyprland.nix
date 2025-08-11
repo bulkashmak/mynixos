@@ -26,6 +26,7 @@
 
   exec-once = [
     "waybar"
+    "hyprpaper"
   ];
 
  
@@ -173,7 +174,7 @@
 
   bind = [
     # Apps
-    "SUPER, E, exec, kitty"
+    "SUPER, E, exec, ghostty"
     "SUPER, F, exec, dolphin"
     "SUPER, SPACE, exec, wofi --show drun"
 
@@ -210,7 +211,16 @@
     "SUPER, 9, workspace, 9"
     "SUPER, 0, workspace, 10"
 
-    # TODO Move active window to workspace
+    # Move window to workspace
+    "SUPER SHIFT, 1, movetoworkspace, 1"
+    "SUPER SHIFT, 2, movetoworkspace, 2"
+    "SUPER SHIFT, 3, movetoworkspace, 3"
+    "SUPER SHIFT, 4, movetoworkspace, 4"
+    "SUPER SHIFT, 5, movetoworkspace, 5"
+    "SUPER SHIFT, 6, movetoworkspace, 6"
+    "SUPER SHIFT, 8, movetoworkspace, 8"
+    "SUPER SHIFT, 9, movetoworkspace, 9"
+    "SUPER SHIFT, 0, movetoworkspace, 10"
 
     # Special workspace
     "SUPER, S, togglespecialworkspace, magic"
@@ -222,8 +232,28 @@
   ];
 
   bindm = [
+    # Move windows with SUPER + LMB and dragging
     "SUPER, mouse:272, movewindow"
+    # Resize windows with SUPER + RMB and dragging
     "SUPER, mouse:273, resizewindow"
+  ];
+
+  bindel = [
+    # Keyboard multimedia keys for volume
+    ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+    ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+    ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+
+    # Keyboard multimedia keys for display brightness. Requires brightnessctl
+    ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
+    ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
+
+    # Keyboard multimedia keys for player. Requires playerctl
+    ", XF86AudioNext, exec, playerctl next"
+    ", XF86AudioPause, exec, playerctl play-pause"
+    ", XF86AudioPlay, exec, playerctl play-pause"
+    ", XF86AudioPrev, exec, playerctl previous"
   ];
 
 

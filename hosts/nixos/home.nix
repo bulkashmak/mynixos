@@ -42,6 +42,8 @@ in {
     luajitPackages.lua-lsp
     stylua
 
+    nerd-fonts.jetbrains-mono
+
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello

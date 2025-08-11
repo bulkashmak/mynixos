@@ -118,8 +118,6 @@
     brightnessctl
     playerctl
 
-    nerd-fonts.jetbrains-mono
-
     gcc
     gnumake
   ];

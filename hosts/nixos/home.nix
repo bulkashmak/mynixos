@@ -16,6 +16,7 @@ in {
     nautilus
     firefox
     bitwarden
+    godot
     # Unfree
     google-chrome
     slack

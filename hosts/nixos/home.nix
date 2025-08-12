@@ -22,6 +22,7 @@ in {
     slack
     jetbrains.idea-ultimate
     postman
+    spotify
 
     # Apps CLI
     neovim

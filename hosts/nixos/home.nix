@@ -25,6 +25,7 @@ in {
     yazi
     dragon-drop
     lazygit
+    lsd
 
     # Services
 
@@ -49,6 +50,18 @@ in {
   # Allow unfree packages, such as google-chrome
   nixpkgs.config.allowUnfree = true;
 
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      # Starship init
+      eval "$(starship init bash)"
+
+      # Aliases
+      alias l="lsd -la"
+      alias ll="lsd -l"
+      alias ls="lsd"
+    '';
+  };
   programs.git = {
     enable = true;
     userName = "Bulat";

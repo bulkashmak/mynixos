@@ -38,6 +38,9 @@
 
     gcc
     gnumake
+
+    # Dependencies
+    appimage-run
   ];
 
   # EFI boot loader systemd-boot

@@ -34,8 +34,10 @@
   # };
 
   # Hyprland
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "intel" ];
+  services.xserver = {
+    enable = true;
+    videoDrivers = [ "intel" ];
+  };
   services.displayManager.sddm.enable = true;
 
   programs.hyprland = {
@@ -49,6 +51,8 @@
     # WLR_NO_HARDWARE_CURSORS = "1";
     # Hint electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
+    XCURSOR_THEME = "capitaine-cursors";
+    XCURSOR_SIZE = 24;
   };
 
   hardware = {
@@ -114,6 +118,9 @@
     wofi
     dunst
     libnotify # dunst dependency
+
+    whitesur-icon-theme
+    capitaine-cursors
 
     brightnessctl
     playerctl

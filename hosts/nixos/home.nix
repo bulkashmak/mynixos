@@ -45,7 +45,6 @@ in {
 
     nerd-fonts.jetbrains-mono
     whitesur-icon-theme
-    capitaine-cursors
   ];
   # Allow unfree packages, such as google-chrome
   nixpkgs.config.allowUnfree = true;
@@ -74,15 +73,16 @@ in {
 
   home.sessionVariables = {
     HYPRSHOT_DIR = "/home/bulat/pictures/screenshots";
-    #XCURSOR_THEME = "Capitaine Cursors";
-    #XCURSOR_SIZE = "24";
+    XCURSOR_THEME = "Capitaine Cursors";
+    XCURSOR_SIZE = "24";
   };
 
-  #home.pointerCursor = { 
-  #  name = "Capitaine Cursors";
-  #  package = pkgs.capitaine-cursors;
-  #  size = 24;
-  #};
+  home.pointerCursor = { 
+    gtk.enable = true;
+    name = "capitaine-cursors";
+    package = pkgs.capitaine-cursors;
+    size = 24;
+  };
 
   # Hyprland
   wayland.windowManager.hyprland = {
@@ -92,10 +92,11 @@ in {
 
   gtk = {
     enable = true;
-    #cursorTheme = {
-    #  name = "Capitaine Cursors";
-    #  package = pkgs.capitaine-cursors;
-    #};
+    cursorTheme = {
+      name = "capitaine-cursors";
+      package = pkgs.capitaine-cursors;
+    };
+    iconTheme.name = "whitesur-icon-theme";
   };
 
   qt = {

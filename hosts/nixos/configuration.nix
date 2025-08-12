@@ -9,6 +9,37 @@
       inputs.home-manager.nixosModules.default
     ];
 
+  # System packages https://search.nixos.org/
+  environment.systemPackages = with pkgs; [
+    # Apps GUI
+    rofi
+
+    vim
+    git
+    stow
+
+    hyprland
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprshot
+    waybar
+    kitty
+    wofi
+    dunst
+    libnotify # dunst dependency
+
+    whitesur-icon-theme
+    capitaine-cursors
+
+    brightnessctl
+    playerctl
+    wl-clipboard
+
+    gcc
+    gnumake
+  ];
+
   # EFI boot loader systemd-boot
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -101,34 +132,6 @@
   };
 
   # programs.firefox.enable = true;
-
-  # System packages https://search.nixos.org/
-  environment.systemPackages = with pkgs; [
-    vim
-    git
-    stow
-
-    hyprland
-    hyprpaper
-    hypridle
-    hyprlock
-    hyprshot
-    waybar
-    kitty
-    wofi
-    dunst
-    libnotify # dunst dependency
-
-    whitesur-icon-theme
-    capitaine-cursors
-
-    brightnessctl
-    playerctl
-    wl-clipboard
-
-    gcc
-    gnumake
-  ];
 
   # Allow dlls for mason
   programs.nix-ld.enable = true;

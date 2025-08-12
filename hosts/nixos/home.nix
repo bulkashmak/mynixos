@@ -14,7 +14,6 @@ in {
     # Apps GUI
     ghostty
     nautilus
-    rofi
     firefox
     bitwarden
     # Unfree

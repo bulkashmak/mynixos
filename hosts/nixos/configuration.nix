@@ -23,7 +23,7 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
 
-  time.timeZone = "Asia/TashkentX";
+  time.timeZone = "Asia/Tashkent";
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
@@ -117,6 +117,7 @@
 
     brightnessctl
     playerctl
+    wl-clipboard
 
     gcc
     gnumake

@@ -14,10 +14,14 @@ in {
     # Apps GUI
     ghostty
     nautilus
+    rofi
     firefox
     bitwarden
-    google-chrome # unfree
-    slack #unfree
+    # Unfree
+    google-chrome
+    slack
+    jetbrains.idea-ultimate
+    postman
 
     # Apps CLI
     neovim
@@ -26,6 +30,8 @@ in {
     dragon-drop
     lazygit
     lsd
+    openconnect_openssl
+    unzip
 
     # Services
 
@@ -42,9 +48,11 @@ in {
     ## Lua
     luajitPackages.lua-lsp
     stylua
-
     nerd-fonts.jetbrains-mono
     whitesur-icon-theme
+  ];
+  nixpkgs.config.permittedInsecurePackages = [
+    "beekeeper-studio-5.1.5"
   ];
   # Allow unfree packages, such as google-chrome
   nixpkgs.config.allowUnfree = true;
@@ -101,7 +109,7 @@ in {
 
   qt = {
     enable = true;
-    platformTheme = "gtk";
+    platformTheme.name = "gtk";
   };
 
   programs.home-manager.enable = true;

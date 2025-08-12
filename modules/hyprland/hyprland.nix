@@ -178,7 +178,7 @@
     # Apps
     "SUPER, E, exec, ghostty"
     "SUPER, F, exec, dolphin"
-    "SUPER, SPACE, exec, GTK_ICON_THEME=WhiteSur wofi --show drun --allow-images"
+    "SUPER, SPACE, exec, GTK_ICON_THEME=WhiteSur rofi -show drun"
 
     "$SUPER_SHIFT, L, exec, hyprlock"
 

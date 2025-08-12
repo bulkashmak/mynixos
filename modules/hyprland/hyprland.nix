@@ -178,7 +178,7 @@
     # Apps
     "SUPER, E, exec, ghostty"
     "SUPER, F, exec, dolphin"
-    "SUPER, SPACE, exec, GTK_ICON_THEME=WhiteSur rofi -show drun"
+    "SUPER, SPACE, exec, GTK_ICON_THEME=WhiteSur /home/bulat/.config/rofi/launchers/type-4/launcher.sh"
 
     "$SUPER_SHIFT, L, exec, hyprlock"
 

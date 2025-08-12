@@ -28,6 +28,11 @@ in {
 
     # Services
 
+    # Languages
+    go
+    rustc
+    cargo
+
     # LSPs and Formatters for Neovim
     ## Golang
     gopls

@@ -36,6 +36,7 @@
   #############################
 
   env = [
+    "XCURSOR_THEME,Capitaine-cursor"
     "XCURSOR_SIZE,24"
     "HYPRCURSOR_SIZE,24"
   ];

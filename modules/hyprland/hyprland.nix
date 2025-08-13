@@ -3,7 +3,10 @@
   ### MONITORS ###
   ################
 
-  monitor = [ "eDP-1,1920x1200@60,0x0,1" ];
+  monitor = [ 
+    "eDP-1,1920x1200@60,0x0,1"
+    "HDMI-A-1, 2560x1440@144,-2560x0,1"
+  ];
 
   xwayland = {
     enabled = true;

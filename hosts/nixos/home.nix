@@ -82,8 +82,6 @@ in {
 
   home.sessionVariables = {
     HYPRSHOT_DIR = "/home/bulat/pictures/screenshots";
-    XCURSOR_THEME = "Capitaine Cursors";
-    XCURSOR_SIZE = "24";
   };
 
   #home.pointerCursor = { 

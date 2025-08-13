@@ -82,16 +82,16 @@ in {
 
   home.sessionVariables = {
     HYPRSHOT_DIR = "/home/bulat/pictures/screenshots";
-    XCURSOR_THEME = "Capitaine Cursors";
-    XCURSOR_SIZE = "24";
+  #  XCURSOR_THEME = "Capitaine Cursors";
+  #  XCURSOR_SIZE = "24";
   };
 
-  home.pointerCursor = { 
-    gtk.enable = true;
-    name = "capitaine-cursors";
-    package = pkgs.capitaine-cursors;
-    size = 24;
-  };
+  #home.pointerCursor = { 
+  #  gtk.enable = true;
+  #  name = "capitaine-cursors";
+  #  package = pkgs.capitaine-cursors;
+  #  size = 32;
+  #};
 
   # Hyprland
   wayland.windowManager.hyprland = {
@@ -104,6 +104,7 @@ in {
     cursorTheme = {
       name = "capitaine-cursors";
       package = pkgs.capitaine-cursors;
+      size = 32;
     };
     iconTheme.name = "whitesur-icon-theme";
   };

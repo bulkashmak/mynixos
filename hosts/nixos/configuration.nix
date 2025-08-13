@@ -97,8 +97,8 @@
     # WLR_NO_HARDWARE_CURSORS = "1";
     # Hint electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
-    XCURSOR_THEME = "capitaine-cursors";
-    XCURSOR_SIZE = 24;
+    #XCURSOR_THEME = "capitaine-cursors";
+    #XCURSOR_SIZE = 24;
   };
 
   hardware = {

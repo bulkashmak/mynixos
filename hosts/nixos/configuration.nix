@@ -84,7 +84,8 @@
     enable = true;
     videoDrivers = [ "intel" ];
   };
-  services.displayManager.sddm.enable = true;
+  services.displayManager.ly.enable = true;
+  services.displayManager.sddm.enable = false;
 
   programs.hyprland = {
     enable = true;

@@ -29,8 +29,6 @@
     dunst
     libnotify # dunst dependency
 
-    capitaine-cursors
-
     brightnessctl
     playerctl
     wl-clipboard

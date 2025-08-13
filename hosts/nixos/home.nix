@@ -13,7 +13,7 @@ in {
   home.packages = with pkgs; [
     # Apps GUI
     ghostty
-    nautilus
+    xfce.thunar
     firefox
     bitwarden
     godot
@@ -88,7 +88,7 @@ in {
       gtk.enable = true;
       name = "capitaine-cursors";
       package = pkgs.capitaine-cursors;
-      size = 24;
+      size = 32;
     };
   };
 
@@ -100,6 +100,10 @@ in {
 
   gtk = {
     enable = true;
+    theme = {
+      name = "Materia-dark"; # "Material-black-colors" "Gruvbox-B"
+      package = pkgs.materia-theme; # pkgs.material-black-colors pkgs.gruvbox-gtk-theme
+    };
   };
 
   qt = {

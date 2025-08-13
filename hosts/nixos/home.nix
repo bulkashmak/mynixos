@@ -50,7 +50,6 @@ in {
     luajitPackages.lua-lsp
     stylua
     nerd-fonts.jetbrains-mono
-    whitesur-icon-theme
   ];
   nixpkgs.config.permittedInsecurePackages = [
     "beekeeper-studio-5.1.5"
@@ -84,12 +83,14 @@ in {
     HYPRSHOT_DIR = "/home/bulat/pictures/screenshots";
   };
 
-  #home.pointerCursor = { 
-  #  gtk.enable = true;
-  #  name = "capitaine-cursors";
-  #  package = pkgs.capitaine-cursors;
-  #  size = 32;
-  #};
+  home = {
+    pointerCursor = { 
+      gtk.enable = true;
+      name = "capitaine-cursors";
+      package = pkgs.capitaine-cursors;
+      size = 24;
+    };
+  };
 
   # Hyprland
   wayland.windowManager.hyprland = {
@@ -99,12 +100,6 @@ in {
 
   gtk = {
     enable = true;
-    #cursorTheme = {
-    #  name = "capitaine-cursors";
-    #  package = pkgs.capitaine-cursors;
-    #  size = 32;
-    #};
-    iconTheme.name = "whitesur-icon-theme";
   };
 
   qt = {

@@ -16,6 +16,7 @@ in {
     xfce.thunar
     firefox
     bitwarden
+    telegram-desktop
     godot
     # Unfree
     google-chrome

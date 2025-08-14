@@ -28,6 +28,7 @@ in {
     # Apps CLI
     neovim
     starship
+    tmux
     yazi
     dragon-drop
     lazygit

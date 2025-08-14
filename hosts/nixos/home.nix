@@ -17,6 +17,7 @@ in {
     firefox
     bitwarden
     telegram-desktop
+    obsidian
     godot
     # Unfree
     google-chrome

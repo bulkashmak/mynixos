@@ -35,6 +35,7 @@ in {
     lazygit
     lsd
     openconnect_openssl
+    globalprotect-openconnect
     unzip
 
     # Services

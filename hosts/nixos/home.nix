@@ -23,6 +23,7 @@ in {
     google-chrome
     slack
     jetbrains.idea-ultimate
+    beekeeper-studio
     postman
     spotify
 

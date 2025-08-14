@@ -272,5 +272,18 @@
 
     # Fix some dragging issues with XWayland
     "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+
+    # Fix Intellij IDEA flickering
+    "noinitialfocus, class:(jetbrains-studio), title:^win(.^)"
+  ];
+
+  windowrulev2 = [
+    # Fix Intellij IDEA flickering
+    # Find in files
+    "noinitialfocus,class:jetbrains-toolbox, floating:1"
+    "noinitialfocus, class:(jetbrains-)(.*), title:^$, initialTitle:^$, floating:1"
+    # Other dialogs
+    "center, class:(jetbrains-)(.*), title:^$, initialTitle:^$, floating:1"
+    "center, class:(jetbrains-)(.*), initialTitle:(.+), floating:1"
   ];
 }

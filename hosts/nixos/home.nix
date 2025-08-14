@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 let
-  hyprlandConf = import "../../modules/home/hypr/hyprland.nix";
+  hyprlandConf = import ./../../modules/hyprland/hyprland.nix;
 in {
   imports = [
       inputs.zen-browser.homeModules.beta

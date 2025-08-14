@@ -36,6 +36,7 @@ in {
     lsd
     openconnect_openssl
     globalprotect-openconnect
+    kafkactl
     unzip
 
     # Services

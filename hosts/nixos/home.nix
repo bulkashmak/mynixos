@@ -86,7 +86,7 @@ in {
   programs.zen-browser.enable = true;
 
   home.sessionVariables = {
-    HYPRSHOT_DIR = "/home/bulat/pictures/screenshots";
+    HYPRSHOT_DIR = "/home/bulat/Pictures/Screenshots";
   };
 
   home = {

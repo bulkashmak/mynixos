@@ -48,6 +48,7 @@ in {
     cargo
 
     # LSPs and Formatters for Neovim
+    vale
     ## Golang
     gopls
     gofumpt

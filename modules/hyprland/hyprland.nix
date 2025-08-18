@@ -180,7 +180,7 @@
   bind = [
     # Apps
     "SUPER, E, exec, ghostty"
-    "SUPER, F, exec, dolphin"
+    "SUPER, F, exec, thunar"
     "SUPER, SPACE, exec, GTK_ICON_THEME=WhiteSur /home/bulat/.config/rofi/launchers/type-4/launcher.sh"
 
     "$SUPER_SHIFT, L, exec, hyprlock"
@@ -283,7 +283,7 @@
     "noinitialfocus,class:jetbrains-toolbox, floating:1"
     "noinitialfocus, class:(jetbrains-)(.*), title:^$, initialTitle:^$, floating:1"
     # Other dialogs
-    "center, class:(jetbrains-)(.*), title:^$, initialTitle:^$, floating:1"
-    "center, class:(jetbrains-)(.*), initialTitle:(.+), floating:1"
+    #"center, class:(jetbrains-)(.*), title:^$, initialTitle:^$, floating:1"
+    #"center, class:(jetbrains-)(.*), initialTitle:(.+), floating:1"
   ];
 }

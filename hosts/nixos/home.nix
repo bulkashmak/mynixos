@@ -74,6 +74,9 @@ in {
       alias l="lsd -la"
       alias ll="lsd -l"
       alias ls="lsd"
+
+      # Exports
+      export PATH=$PATH:$HOME/go/bin
     '';
   };
   programs.git = {

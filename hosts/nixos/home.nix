@@ -32,6 +32,7 @@ in {
     starship
     tmux
     yazi
+    fzf
     dragon-drop
     lazygit
     lsd

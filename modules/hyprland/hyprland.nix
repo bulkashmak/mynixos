@@ -55,13 +55,13 @@
   #####################
 
   general = {
-    gaps_in = 3;
-    gaps_out = 9;
+    gaps_in = 5;
+    gaps_out = 5;
 
-    border_size = 2;
+    border_size = 1;
 
-    "col.active_border" = "rgba(ff5900ff)";
-    "col.inactive_border" = "rgba(595959aa)";
+    "col.active_border" = "rgba(c8c8c8ff)";
+    "col.inactive_border" = "rgba(646464ff)";
 
     resize_on_border = false;
     allow_tearing = false;

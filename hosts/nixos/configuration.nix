@@ -26,7 +26,7 @@
     waybar
     kitty
     wofi
-    dunst
+    swaynotificationcenter
     libnotify # dunst dependency
 
     brightnessctl

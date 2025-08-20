@@ -20,6 +20,7 @@ in {
     obsidian
     libreoffice-qt6-fresh
     godot
+    globalprotect-openconnect
     # Unfree
     google-chrome
     slack

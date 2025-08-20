@@ -29,6 +29,9 @@ in {
     postman
     spotify
 
+    # Apps TUI
+    spotify-tui
+
     # Apps CLI
     neovim
     starship

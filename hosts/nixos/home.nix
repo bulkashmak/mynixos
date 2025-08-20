@@ -18,6 +18,7 @@ in {
     bitwarden
     telegram-desktop
     obsidian
+    libreoffice-qt6-fresh
     godot
     # Unfree
     google-chrome

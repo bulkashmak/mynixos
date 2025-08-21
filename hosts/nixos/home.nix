@@ -42,6 +42,7 @@ in {
     globalprotect-openconnect
     kafkactl
     unzip
+    jq
 
     # Services
 

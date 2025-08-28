@@ -29,6 +29,8 @@
     swaynotificationcenter
     libnotify # dunst dependency
 
+    blueman
+
     brightnessctl
     playerctl
     wl-clipboard

@@ -44,6 +44,8 @@ in {
     unzip
     jq
     podman
+    podman-tui
+    podman-compose
 
     # Services
 

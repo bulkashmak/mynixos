@@ -43,6 +43,7 @@ in {
     kafkactl
     unzip
     jq
+    podman
 
     # Services
 

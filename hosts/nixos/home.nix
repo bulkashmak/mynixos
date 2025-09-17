@@ -81,6 +81,7 @@ in {
       alias l="lsd -la"
       alias ll="lsd -l"
       alias ls="lsd"
+      alias forti="~/.scripts/openconnect-fortinet.sh"
 
       # Exports
       export PATH=$PATH:$HOME/go/bin

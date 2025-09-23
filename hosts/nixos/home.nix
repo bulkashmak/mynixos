@@ -24,6 +24,7 @@ in {
     # Unfree
     google-chrome
     slack
+    zoom-us
     jetbrains.idea-ultimate
     beekeeper-studio
     postman

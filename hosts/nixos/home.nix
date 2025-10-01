@@ -21,9 +21,11 @@ in {
     libreoffice-qt6-fresh
     godot
     globalprotect-openconnect
-    pinta
     vlc
     feh # image viewer
+    rawtherapee
+    pinta
+    gimp
     # Unfree
     google-chrome
     slack

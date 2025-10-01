@@ -29,6 +29,7 @@ in {
     beekeeper-studio
     postman
     spotify
+    discord
 
     # Apps CLI
     neovim

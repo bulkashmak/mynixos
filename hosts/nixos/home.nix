@@ -44,6 +44,7 @@ in {
     fastfetch
     impala # wifi manager, need to disable other wifi services like wpa and NetworkManager and enable iwq for this to work
     bluetuith
+    #wiremix # unstable branch
 
     # Apps CLI
     starship

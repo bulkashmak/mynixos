@@ -21,6 +21,9 @@ in {
     libreoffice-qt6-fresh
     godot
     globalprotect-openconnect
+    pinta
+    vlc
+    feh # image viewer
     # Unfree
     google-chrome
     slack
@@ -30,15 +33,22 @@ in {
     postman
     spotify
     discord
-
-    # Apps CLI
+    
+    # Apps TUI
     neovim
-    starship
-    tmux
     yazi
     fzf
-    dragon-drop
     lazygit
+    lazydocker
+    btop
+    fastfetch
+    impala # wifi manager
+    bluetuith
+
+    # Apps CLI
+    starship
+    tmux
+    dragon-drop
     lsd
     openconnect_openssl
     globalprotect-openconnect
@@ -84,6 +94,7 @@ in {
       alias ll="lsd -l"
       alias ls="lsd"
       alias forti="~/.scripts/openconnect-fortinet.sh"
+      alias blue="bluetuith"
 
       # Exports
       export PATH=$PATH:$HOME/go/bin

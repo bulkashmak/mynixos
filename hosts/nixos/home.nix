@@ -42,7 +42,7 @@ in {
     lazydocker
     btop
     fastfetch
-    impala # wifi manager
+    impala # wifi manager, need to disable other wifi services like wpa and NetworkManager and enable iwq for this to work
     bluetuith
 
     # Apps CLI

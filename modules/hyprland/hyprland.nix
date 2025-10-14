@@ -275,6 +275,11 @@
 
     # Fix Intellij IDEA flickering
     "noinitialfocus, class:(jetbrains-studio), title:^win(.^)"
+
+    # Fix Zoom audio drop down
+    "noinitialfocus, class:zoom, title:Zoom Workplace"
+    # Fix Zoom camera, login and other context menus
+    "noinitialfocus, class:zoom, title:menu window"
   ];
 
   windowrulev2 = [

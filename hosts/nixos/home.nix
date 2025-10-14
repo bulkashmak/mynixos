@@ -26,6 +26,7 @@ in {
     rawtherapee
     pinta
     gimp
+    vscode
     # Unfree
     google-chrome
     slack

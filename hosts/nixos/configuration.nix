@@ -40,6 +40,8 @@
 
     # Dependencies
     appimage-run
+    linuxHeaders # OBS dependency
+    linuxKernel.packages.linux_zen.v4l2loopback # OBS dependency
   ];
 
   # EFI boot loader systemd-boot

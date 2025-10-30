@@ -64,6 +64,7 @@ in {
     podman-compose
 
     # Services
+    postgresql
 
     # Languages
     go

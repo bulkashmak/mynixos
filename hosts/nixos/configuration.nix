@@ -12,6 +12,7 @@
   # System packages https://search.nixos.org/
   environment.systemPackages = with pkgs; [
     # Apps GUI
+    obs-studio
     rofi
 
     vim
@@ -41,7 +42,6 @@
     # Dependencies
     appimage-run
     linuxHeaders # OBS dependency
-    linuxKernel.packages.linux_zen.v4l2loopback # OBS dependency
   ];
 
   # EFI boot loader systemd-boot
@@ -52,6 +52,12 @@
     };
     efi.canTouchEfiVariables = true;
   };
+  boot.extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+  boot.kernelModules = [ "v4l2loopback" ];
+  boot.extraModprobeConfig = ''
+    options v4l2loopback devices=1 video_nr=1 card_label="OBS Virtual Camera" exclusive_caps=1
+  '';
+  security.polkit.enable=true;
 
   # Garbage collector
   nix.gc = {
@@ -93,6 +99,7 @@
     xwayland.enable = true;
     package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   };
+  programs.obs-studio.enable = true;
 
   environment.sessionVariables = {
     # If cursor becomes invisible

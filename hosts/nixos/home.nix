@@ -21,7 +21,6 @@ in {
     libreoffice-qt6-fresh
     godot
     globalprotect-openconnect
-    obs-studio
     vlc
     feh # image viewer
     rawtherapee

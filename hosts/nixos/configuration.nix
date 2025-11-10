@@ -76,7 +76,7 @@
   # Bluetooth
   hardware.bluetooth.enable = true;
 
-  time.timeZone = "Asia/Tashkent";
+  time.timeZone = "Europe/Moscow";
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";

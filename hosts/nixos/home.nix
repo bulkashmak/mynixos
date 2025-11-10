@@ -62,6 +62,7 @@ in {
     podman
     podman-tui
     podman-compose
+    amnezia-vpn
 
     # Services
     postgresql

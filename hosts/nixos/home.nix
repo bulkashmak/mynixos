@@ -99,6 +99,7 @@ in {
       alias ll="lsd -l"
       alias ls="lsd"
       alias forti="~/.scripts/openconnect-fortinet.sh"
+      alias gp01="~/.scripts/openconnect-globalprotect-01.sh"
       alias blue="bluetuith"
 
       # Exports

@@ -27,6 +27,7 @@ in {
     pinta
     gimp
     vscode
+    amnezia-vpn
     # Unfree
     google-chrome
     slack
@@ -36,6 +37,7 @@ in {
     postman
     spotify
     discord
+    code-cursor
     
     # Apps TUI
     neovim
@@ -62,7 +64,6 @@ in {
     podman
     podman-tui
     podman-compose
-    amnezia-vpn
 
     # Services
     postgresql

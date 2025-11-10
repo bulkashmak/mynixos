@@ -35,6 +35,7 @@
     brightnessctl
     playerctl
     wl-clipboard
+    nftables
 
     gcc
     gnumake

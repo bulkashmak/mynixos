@@ -58,6 +58,7 @@ in {
     lsd
     openconnect_openssl
     globalprotect-openconnect
+    openvpn
     kafkactl
     unzip
     jq

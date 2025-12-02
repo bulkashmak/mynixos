@@ -103,6 +103,7 @@ in {
       alias ls="lsd"
       alias forti="~/.scripts/openconnect-fortinet.sh"
       alias gp01="~/.scripts/openconnect-globalprotect-01.sh"
+      alias rsvlv="~/.scripts/openvpn-rsv-lv.sh"
       alias blue="bluetuith"
 
       # Exports

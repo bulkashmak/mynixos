@@ -73,6 +73,7 @@ in {
     go
     rustc
     cargo
+    python3
 
     # LSPs and Formatters for Neovim
     vale

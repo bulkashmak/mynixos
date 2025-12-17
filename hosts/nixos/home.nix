@@ -37,7 +37,6 @@ in {
     postman
     spotify
     discord
-    code-cursor
     
     # Apps TUI
     neovim

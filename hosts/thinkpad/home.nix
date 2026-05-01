@@ -9,11 +9,5 @@
         scale 1
         position x=0 y=0
     }
-
-    output "HDMI-A-1" {
-        mode "2560x1440@144"
-        scale 1
-        position x=-2560 y=0
-    }
   '';
 }

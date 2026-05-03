@@ -28,9 +28,9 @@ in
 
   config = {
     # niri itself is enabled and packaged at the system level (modules/nixos/niri.nix); on the
-    # home-manager side we only need niri-flake to write the user's config.kdl. We assemble it
-    # from per-concern fragments and append DMS-managed includes so DMS-driven theming applies.
-    programs.niri.enable = true;
+    # home-manager side niri-flake auto-injects homeModules.config (via the nixos module's
+    # home-manager.sharedModules), so programs.niri.config is available without an explicit import.
+    # programs.niri.enable / .package are NixOS-only — do not set them here.
     programs.niri.config = lib.mkForce (lib.concatStringsSep "\n" [
       cfg._kdl.misc
       cfg._kdl.input

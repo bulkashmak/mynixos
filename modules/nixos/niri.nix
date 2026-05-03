@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
+  # niri-flake overlay exposes `pkgs.niri-stable` and `pkgs.niri-unstable`.
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+
   programs.niri.enable = true;
 
   services.greetd = {

@@ -12,6 +12,7 @@ inputs.nixpkgs.lib.nixosSystem {
 
     # Third-party NixOS modules
     inputs.home-manager.nixosModules.home-manager
+    inputs.niri.nixosModules.niri
     inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.disko.nixosModules.disko
 

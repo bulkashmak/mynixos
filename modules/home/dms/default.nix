@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   # The DMS settings.json, ported from the existing ~/.config/DankMaterialShell/settings.json.
@@ -13,6 +13,8 @@ in
   programs.dank-material-shell = {
     enable = true;
     systemd.enable = true;
+    # dgop is not in nixpkgs and DMS does not ship it; pull it from its own flake.
+    dgop.package = inputs.dgop.packages.${pkgs.system}.dgop;
   };
 
   # The DMS daemon writes its matugen-generated KDL fragments into ~/.config/niri/dms/ at runtime

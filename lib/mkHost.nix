@@ -29,6 +29,7 @@ inputs.nixpkgs.lib.nixosSystem {
           imports = [
             ../modules/home
             ../hosts/${hostname}/home.nix
+            inputs.niri.homeModules.niri
             inputs.dms.homeModules.dank-material-shell
           ];
         };

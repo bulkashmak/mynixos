@@ -28,8 +28,8 @@ in
 
   config = {
     # niri itself is enabled and packaged at the system level (modules/nixos/niri.nix); on the
-    # home-manager side we only need niri-flake to write the user's config.kdl. We assemble it
-    # from per-concern fragments and append DMS-managed includes so DMS-driven theming applies.
+    # home-manager side we only write the user's config.kdl via the upstream programs.niri module.
+    # We assemble it from per-concern fragments and append DMS-managed includes so DMS-driven theming applies.
     programs.niri.enable = true;
     programs.niri.config = lib.mkForce (lib.concatStringsSep "\n" [
       cfg._kdl.misc

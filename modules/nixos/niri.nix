@@ -1,11 +1,6 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  # Apply niri-flake overlay so `pkgs.niri-stable` and `pkgs.niri-unstable` are available
-  # (the niri-flake nixosModule itself defaults to a sensible choice; we just want the
-  # overlay around in case other modules want to pin a specific version).
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-
   programs.niri.enable = true;
 
   services.greetd = {

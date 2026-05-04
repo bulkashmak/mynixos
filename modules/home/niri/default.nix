@@ -31,7 +31,14 @@ in
     # home-manager side niri-flake auto-injects homeModules.config (via the nixos module's
     # home-manager.sharedModules), so programs.niri.config is available without an explicit import.
     # programs.niri.enable / .package are NixOS-only — do not set them here.
-    programs.niri.config = lib.mkForce (lib.concatStringsSep "\n" [
+    #
+    # We deliberately set programs.niri.config = null and write the file via xdg.configFile to
+    # bypass niri-flake's `niri validate` step. The DMS includes below resolve to files DMS
+    # writes at runtime under ~/.config/niri/dms/, which don't exist during the nix build, so
+    # validation would fail with "failed to read included config".
+    programs.niri.config = lib.mkForce null;
+
+    xdg.configFile."niri/config.kdl".text = lib.concatStringsSep "\n" [
       cfg._kdl.misc
       cfg._kdl.input
       cfg._kdl.layout
@@ -51,6 +58,6 @@ in
         include "dms/outputs.kdl"
         include "dms/windowrules.kdl"
       ''
-    ]);
+    ];
   };
 }

@@ -5,13 +5,10 @@
     systemd-boot = {
       enable = true;
       configurationLimit = 5;
-      # Kernels live on the XBOOTLDR partition (mounted at /boot) declared in
-      # the host's disko.nix; the ESP at /efi just holds the bootloader binary.
-      xbootldrMountPoint = "/boot";
     };
     efi = {
       canTouchEfiVariables = true;
-      efiSysMountPoint = "/efi";
+      efiSysMountPoint = "/boot";
     };
   };
 

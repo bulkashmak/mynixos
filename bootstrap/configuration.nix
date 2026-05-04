@@ -15,11 +15,10 @@ in
   boot.loader.systemd-boot = {
     enable = true;
     configurationLimit = 5;
-    xbootldrMountPoint = "/boot";
   };
   boot.loader.efi = {
     canTouchEfiVariables = true;
-    efiSysMountPoint = "/efi";
+    efiSysMountPoint = "/boot";
   };
 
   networking.hostName = "thinkpad";

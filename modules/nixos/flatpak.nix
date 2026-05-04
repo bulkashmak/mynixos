@@ -12,5 +12,8 @@
         location = "https://flathub.org/repo/flathub.flatpakrepo";
       }
     ];
+    packages = [
+      "org.mozilla.firefox"
+    ];
   };
 }

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, username, ... }:
+{ pkgs, username, ... }:
 
 {
   home.username = username;
@@ -7,35 +7,7 @@
 
   programs.home-manager.enable = true;
 
-  home.packages = with pkgs; [
-    # CLI tools
-    yazi
-    fzf
-    lazygit
-    btop
-    fastfetch
-    impala
-    tmux
-    lsd
-    starship
-    dragon-drop
-    ripgrep
-    fd
-  ];
-
-  programs.bash = {
-    enable = true;
-    bashrcExtra = ''
-      eval "$(starship init bash)"
-
-      alias l="lsd -la"
-      alias ll="lsd -l"
-      alias ls="lsd"
-      alias blue="bluetuith"
-
-      export PATH=$PATH:$HOME/go/bin:$HOME/.cargo/bin
-    '';
-  };
+  programs.bash.enable = true;
 
   programs.starship = {
     enable = true;
@@ -73,7 +45,6 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "nvim";
-    HYPRSHOT_DIR = "${config.home.homeDirectory}/Pictures/Screenshots";
+    EDITOR = "vim";
   };
 }

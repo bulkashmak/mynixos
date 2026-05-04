@@ -9,7 +9,6 @@
     ./niri.nix
     ./flatpak.nix
     ./fonts.nix
-    ./printing.nix
     ./laptop.nix
   ];
 }

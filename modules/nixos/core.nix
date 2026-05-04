@@ -24,26 +24,13 @@
     algorithm = "zstd";
   };
 
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    substituters = [
-      "https://cache.nixos.org"
-      "https://niri.cachix.org"
-    ];
-    trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
-    ];
-  };
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "qtwebengine-5.15.19"
-  ];
 
   time.timeZone = "Europe/Moscow";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -51,18 +38,9 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
-  programs.nix-ld.enable = true;
-
   environment.systemPackages = with pkgs; [
     vim
     git
-    stow
-    wget
-    curl
-    unzip
-    jq
-    gcc
-    gnumake
     wl-clipboard
     brightnessctl
     playerctl

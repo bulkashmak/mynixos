@@ -1,5 +1,5 @@
 {
-  description = "Bulat's NixOS flake — multi-host (thinkpad, desktop), niri + DankMaterialShell, declarative flatpaks";
+  description = "Bulat's NixOS flake — thinkpad, niri, declarative flatpaks";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
@@ -20,16 +20,6 @@
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dgop = {
-      url = "github:AvengeMedia/dgop";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, ... }:
@@ -41,11 +31,6 @@
       nixosConfigurations = {
         thinkpad = mkHost {
           hostname = "thinkpad";
-          username = "bulat";
-        };
-
-        formd = mkHost {
-          hostname = "formd";
           username = "bulat";
         };
       };

@@ -1,15 +1,10 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  # niri-flake overlay exposes `pkgs.niri-stable` and `pkgs.niri-unstable`.
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-
-  programs.niri.enable = true;
-  # niri-flake's `niri-stable` is pinned to v25.08, which doesn't support the `include`
-  # KDL directive (added in v25.11). DMS injects `include` lines into our config, so
-  # validation fails. Use the nixpkgs niri (25.11) which supports `include` and is also
-  # already on cache.nixos.org.
-  programs.niri.package = pkgs.niri;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
+  };
 
   services.greetd = {
     enable = true;

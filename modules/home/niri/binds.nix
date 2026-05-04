@@ -12,15 +12,6 @@
 
         // Apps
         Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
-        Mod+Space hotkey-overlay-title="Run an Application: Vicinae" { spawn "vicinae" "toggle"; }
-        Alt+Space hotkey-overlay-title="Run an Application: DMS Spotlight" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
-        Mod+E hotkey-overlay-title="Run an Application: Nautilus" { spawn "nautilus"; }
-        Mod+N hotkey-overlay-title="Run an Application: DMS Notifications" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-        Mod+P hotkey-overlay-title="Run an Application: Bitwarden" { spawn "flatpak" "run" "com.bitwarden.desktop" "--ozone-platform=wayland"; }
-        Mod+A hotkey-overlay-title="Run an Application: Bazaar" { spawn "bazaar"; }
-        Super+Ctrl+L hotkey-overlay-title="Lock the Screen: DMS Lock" { spawn "dms" "ipc" "call" "lock" "lock"; }
-
-        Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
         // Audio
         XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }

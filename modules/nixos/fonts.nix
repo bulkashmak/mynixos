@@ -9,7 +9,7 @@
     nerd-fonts.fira-code
     noto-fonts
     noto-fonts-cjk-sans
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
 
   fonts.fontconfig.defaultFonts = {

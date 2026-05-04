@@ -8,7 +8,6 @@ inputs.nixpkgs.lib.nixosSystem {
   modules = [
     # Shared module roots
     ../modules/nixos
-    ../modules/bundles
 
     # Third-party NixOS modules
     inputs.home-manager.nixosModules.home-manager
@@ -29,7 +28,6 @@ inputs.nixpkgs.lib.nixosSystem {
           imports = [
             ../modules/home
             ../hosts/${hostname}/home.nix
-            inputs.dms.homeModules.dank-material-shell
           ];
         };
       };

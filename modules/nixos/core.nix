@@ -44,6 +44,7 @@
     brightnessctl
     playerctl
     nodejs_24
+    nautilus
   ];
 
   environment.sessionVariables = {

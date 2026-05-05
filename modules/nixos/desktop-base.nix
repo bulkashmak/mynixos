@@ -14,4 +14,6 @@
 
   services.gnome.gnome-keyring.enable = true;
   programs.dconf.enable = true;
+
+  services.printing.enable = true;
 }

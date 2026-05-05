@@ -10,6 +10,5 @@
     ./flatpak.nix
     ./fonts.nix
     ./laptop.nix
-    ./shell.nix
   ];
 }

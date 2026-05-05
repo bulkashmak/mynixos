@@ -12,6 +12,4 @@ in
     systemd.enable = true;
     dgop.package = pkgs-unstable.dgop;
   };
-
-  services.printing.enable = true;
 }

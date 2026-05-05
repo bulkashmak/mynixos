@@ -7,6 +7,11 @@
   };
 
   config.my.niri._kdl.windowRules = ''
+    // Don't fill transparent windows with focus-ring/border color
+    window-rule {
+        draw-border-with-background false
+    }
+
     // Zoom: float small popup windows, keep main meeting unfloated
     window-rule {
         match app-id="zoom" title="^zoom$"

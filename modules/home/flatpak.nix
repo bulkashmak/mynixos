@@ -22,8 +22,9 @@
       "de.haeckerfelix.Fragments"
 
       # Social
-      "com.discordapp.Discord"
+      "org.telegram.desktop"
       "com.slack.Slack"
+      "com.discordapp.Discord"
 
       # Productivity
       "com.bitwarden.desktop"

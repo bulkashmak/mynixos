@@ -6,9 +6,10 @@
     ./audio.nix
     ./bluetooth.nix
     ./desktop-base.nix
-    ./niri.nix
+    ./wm.nix
     ./flatpak.nix
     ./fonts.nix
     ./laptop.nix
+    ./shell.nix
   ];
 }

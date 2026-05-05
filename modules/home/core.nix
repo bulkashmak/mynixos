@@ -1,4 +1,4 @@
-{ pkgs, username, ... }:
+{ pkgs, inputs, username, ... }:
 
 {
   home.username = username;
@@ -47,4 +47,8 @@
   home.sessionVariables = {
     EDITOR = "vim";
   };
+
+  home.packages = [
+    inputs.claude-code.packages.${pkgs.system}.default
+  ];
 }

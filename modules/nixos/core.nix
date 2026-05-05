@@ -41,6 +41,7 @@
     wl-clipboard
     brightnessctl
     playerctl
+    nodejs_24
   ];
 
   environment.sessionVariables = {

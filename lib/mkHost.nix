@@ -13,6 +13,7 @@ inputs.nixpkgs.lib.nixosSystem {
     inputs.home-manager.nixosModules.home-manager
     inputs.niri.nixosModules.niri
     inputs.nix-flatpak.nixosModules.nix-flatpak
+    inputs.dms.nixosModules.default
     inputs.disko.nixosModules.disko
 
     # Host-specific

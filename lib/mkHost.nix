@@ -12,7 +12,6 @@ inputs.nixpkgs.lib.nixosSystem {
     # Third-party NixOS modules
     inputs.home-manager.nixosModules.home-manager
     inputs.niri.nixosModules.niri
-    inputs.nix-flatpak.nixosModules.nix-flatpak
     inputs.dms.nixosModules.default
     inputs.disko.nixosModules.disko
 
@@ -25,6 +24,9 @@ inputs.nixpkgs.lib.nixosSystem {
         useGlobalPkgs = true;
         useUserPackages = true;
         extraSpecialArgs = { inherit inputs hostname username; };
+        sharedModules = [
+          inputs.nix-flatpak.homeManagerModules.nix-flatpak
+        ];
         users.${username} = {
           imports = [
             ../modules/home

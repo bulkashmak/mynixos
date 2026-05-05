@@ -1,19 +1,5 @@
 {
-  services.flatpak = {
-    enable = true;
-    update.auto = {
-      enable = true;
-      onCalendar = "weekly";
-    };
-    uninstallUnmanaged = true;
-    remotes = [
-      {
-        name = "flathub";
-        location = "https://flathub.org/repo/flathub.flatpakrepo";
-      }
-    ];
-    packages = [
-      "org.mozilla.firefox"
-    ];
-  };
+  # Flatpak runtime + dbus service.
+  # Package management is done per-user in modules/home/flatpak.nix.
+  services.flatpak.enable = true;
 }

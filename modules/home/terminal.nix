@@ -5,14 +5,24 @@
     enable = true;
     enableBashIntegration = true;
     settings = {
-      theme = "GruvboxDark";
+      # Font
       font-family = "JetBrainsMono Nerd Font";
       font-size = 12;
-      window-padding-x = 8;
-      window-padding-y = 8;
+      # Theme
+      #theme = "GruvboxDark";
       window-decoration = false;
-      cursor-style = "block";
-      shell-integration = "bash";
+      #window-padding-x = 8;
+      #window-padding-y = 8;
+      #cursor-style = "block";
+      #shell-integration = "bash";
+      background-opacity = 0.75;
+      background-blur-radius = 20;
+      # Binds
+      ## Unbind tmux/nvim
+      #keybind = ctrl+shift+h=unbind
+      #keybind = ctrl+shift+j=unbind
+      #keybind = ctrl+shift+k=unbind
+      #keybind = ctrl+shift+l=unbind
     };
   };
 }

@@ -37,7 +37,9 @@
 
   environment.systemPackages = with pkgs; [
     vim
+    neovim
     git
+    stow
     wl-clipboard
     brightnessctl
     playerctl

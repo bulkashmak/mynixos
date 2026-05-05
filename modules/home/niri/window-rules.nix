@@ -40,5 +40,11 @@
         match app-id=r#"zen$"# title="^Picture-in-Picture$"
         open-floating true
     }
+
+    // Workaround WezTerm's initial-configure bug
+    window-rule {
+        match app-id=r#"^org\.wezfurlong\.wezterm$"#
+        default-column-width {}
+    }
   '';
 }

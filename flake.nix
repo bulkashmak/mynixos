@@ -28,6 +28,10 @@
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    dms-plugins = {
+      url = "git+https://github.com/AvengeMedia/dms-plugin-registry";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Other
     claude-code.url = "github:sadjow/claude-code-nix";

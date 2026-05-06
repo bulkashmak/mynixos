@@ -22,10 +22,12 @@ inputs.nixpkgs.lib.nixosSystem {
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
+        backupFileExtension = "hm-bak";
         extraSpecialArgs = { inherit inputs hostname username; };
         sharedModules = [
           inputs.nix-flatpak.homeManagerModules.nix-flatpak
           inputs.dms.homeModules.default
+          inputs.dms-plugins.homeModules.default
         ];
         users.${username} = {
           imports = [

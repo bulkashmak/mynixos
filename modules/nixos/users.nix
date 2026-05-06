@@ -3,6 +3,6 @@
 {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "input" "networkmanager" "video" "podman" ];
+    extraGroups = [ "wheel" "input" "networkmanager" "video" "podman" "adbusers" "kvm" ];
   };
 }

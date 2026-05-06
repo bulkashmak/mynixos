@@ -8,6 +8,7 @@
     ./shell.nix
     ./starship
     ./lsd
+    ./android
     ./niri
   ];
 }

@@ -9,11 +9,6 @@
 
   programs.bash.enable = true;
 
-  programs.starship = {
-    enable = true;
-    enableBashIntegration = true;
-  };
-
   programs.git = {
     enable = true;
     settings = {

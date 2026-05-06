@@ -5,6 +5,7 @@
     ./terminal.nix
     ./flatpak.nix
     ./shell.nix
+    ./starship
     ./niri
   ];
 }

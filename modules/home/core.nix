@@ -7,8 +7,6 @@
 
   programs.home-manager.enable = true;
 
-  programs.bash.enable = true;
-
   programs.git = {
     enable = true;
     settings = {

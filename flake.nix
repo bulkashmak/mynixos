@@ -1,31 +1,53 @@
 {
-  description = "My NixOS config with Home Manager";
+  description = "Bulat's NixOS flake — thinkpad, niri, declarative flatpaks";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05"; 
-    hyprland.url = "github:hyprwm/Hyprland";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
+    # Nix Ecosystem
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    disko = {
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Desktop Environment
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Flatpak
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
+
+    # Shell
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    dms-plugins = {
+      url = "git+https://github.com/AvengeMedia/dms-plugin-registry";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # Other
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = inputs @ { self, nixpkgs, home-manager, ... }:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      mkHost = import ./lib/mkHost.nix { inherit inputs system; };
     in
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        modules = [
-          ./hosts/nixos/configuration.nix
-          inputs.home-manager.nixosModules.default
-        ];
+      nixosConfigurations = {
+        thinkpad = mkHost {
+          hostname = "thinkpad";
+          username = "bulat";
+        };
       };
     };
 }

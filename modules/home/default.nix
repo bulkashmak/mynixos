@@ -6,6 +6,7 @@
     ./flatpak.nix
     ./shell.nix
     ./starship
+    ./lsd
     ./niri
   ];
 }

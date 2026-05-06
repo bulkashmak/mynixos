@@ -39,6 +39,7 @@
 
   home.sessionVariables = {
     EDITOR = "vim";
+    DOCKER_HOST = "unix:///run/podman/podman.sock";
   };
 
   home.packages = [

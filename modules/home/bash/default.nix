@@ -11,6 +11,8 @@
 
       lg = "lazygit";
       ld = "lazydocker";
+
+      switch = "~/.nixos/rebuild.sh";
     };
 
     sessionVariables = {

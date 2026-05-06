@@ -10,5 +10,6 @@
     ./flatpak.nix
     ./fonts.nix
     ./laptop.nix
+    ./podman.nix
   ];
 }

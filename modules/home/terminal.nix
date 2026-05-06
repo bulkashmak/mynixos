@@ -11,6 +11,7 @@
 
       theme = "Monokai Remastered";
 
+      background = "#141414";
       background-opacity = 0.75;
       background-blur-radius = 20;
 

@@ -28,7 +28,7 @@ in
     plugins = {
       dankPomodoroTimer.enable = true;
       dankBatteryAlerts.enable = true;
-      flatpakUpdates.enable = true;
+      flatpakUpdates.enable = false;
       usbManager.enable = true;
     };
 
@@ -74,7 +74,6 @@ in
         rightWidgets = [
           "systemTray"
           "clipboard"
-          "flatpakUpdates"
           "usbManager"
           { id = "keyboard_layout_name"; enabled = true; keyboardLayoutNameCompactMode = true; }
           "battery"

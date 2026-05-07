@@ -9,8 +9,6 @@
   config.my.niri._kdl.misc = ''
     prefer-no-csd
 
-    spawn-at-startup "vicinae" "server"
-
     screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
     hotkey-overlay {

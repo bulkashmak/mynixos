@@ -28,6 +28,7 @@ inputs.nixpkgs.lib.nixosSystem {
           inputs.nix-flatpak.homeManagerModules.nix-flatpak
           inputs.dms.homeModules.default
           inputs.dms-plugins.homeModules.default
+          inputs.vicinae.homeManagerModules.default
         ];
         users.${username} = {
           imports = [

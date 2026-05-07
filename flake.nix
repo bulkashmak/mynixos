@@ -35,6 +35,7 @@
 
     # Other
     claude-code.url = "github:sadjow/claude-code-nix";
+    vicinae.url = "github:vicinaehq/vicinae";
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, ... }:

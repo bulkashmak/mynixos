@@ -13,12 +13,12 @@
     ];
     packages = [
       # Flatpak Ecosystem
-      "io.github.kolunmi.Bazaar"
       "io.github.flattool.Warehouse"
       "com.github.tchx84.Flatseal"
 
       # Web
       "app.zen_browser.zen"
+      "us.zoom.Zoom"
       "de.haeckerfelix.Fragments"
 
       # Social

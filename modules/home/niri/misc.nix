@@ -15,6 +15,12 @@
         skip-at-startup
     }
 
+    // XWayland for X11-only apps (e.g. Bitwarden, Zoom flatpaks).
+    spawn-at-startup "xwayland-satellite"
+    environment {
+        DISPLAY ":0"
+    }
+
     workspace "1"
     workspace "2"
     workspace "3"

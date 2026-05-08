@@ -45,6 +45,7 @@
     playerctl
     nodejs_24
     nautilus
+    xwayland-satellite
   ];
 
   environment.sessionVariables = {

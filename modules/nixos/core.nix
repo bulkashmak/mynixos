@@ -38,6 +38,7 @@
   environment.systemPackages = with pkgs; [
     vim
     neovim
+    tmux
     git
     stow
     wl-clipboard

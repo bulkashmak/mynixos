@@ -26,8 +26,7 @@ inputs.nixpkgs.lib.nixosSystem {
         extraSpecialArgs = { inherit inputs hostname username; };
         sharedModules = [
           inputs.nix-flatpak.homeManagerModules.nix-flatpak
-          inputs.dms.homeModules.default
-          inputs.dms-plugins.homeModules.default
+          inputs.noctalia.homeModules.default
           inputs.vicinae.homeManagerModules.default
         ];
         users.${username} = {

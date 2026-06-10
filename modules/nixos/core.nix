@@ -35,7 +35,7 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
-  boot.extraModulePackages = with config.boot.kernetPaskeges; [
+  boot.extraModulePackages = with config.boot.kernelPackages; [
     amneziawg
   ];
 

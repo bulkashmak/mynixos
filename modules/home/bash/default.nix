@@ -13,6 +13,9 @@
       ld = "lazydocker";
 
       switch = "~/.nixos/rebuild.sh";
+
+      awgup = "sudo awg-quick up Netherlands";
+      awgdown = "sudo awg-quick down Netherlands";
     };
 
     sessionVariables = {

@@ -35,6 +35,10 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
+  boot.extraModulePackages = with config.boot.kernetPaskeges; [
+    amneziawg
+  ];
+
   environment.systemPackages = with pkgs; [
     vim
     neovim
@@ -47,6 +51,7 @@
     nodejs_24
     nautilus
     xwayland-satellite
+    amneziawg-tools
   ];
 
   environment.sessionVariables = {

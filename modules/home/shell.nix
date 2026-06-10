@@ -17,6 +17,35 @@ in
         # Generate a Material palette from the current wallpaper.
         useWallpaperColors = true;
       };
+
+      bar = {
+        # Only `left` and `right` are overridden; `center` keeps its default
+        # (the Workspace widget). Noctalia deep-merges declared settings onto
+        # its defaults, so omitted keys fall back to the shipped values.
+        widgets = {
+          # Default left set minus ActiveWindow (current-window widget removed).
+          left = [
+            { id = "Launcher"; }
+            { id = "Clock"; }
+            { id = "SystemMonitor"; }
+            { id = "MediaMini"; }
+          ];
+          # tray -> battery -> brightness -> volume -> control center -> notifications
+          right = [
+            { id = "Tray"; }
+            # `graphic` keeps the default circular battery but renders the
+            # percentage text inside it (default `graphic-clean` hides it).
+            {
+              id = "Battery";
+              displayMode = "graphic";
+            }
+            { id = "Brightness"; }
+            { id = "Volume"; }
+            { id = "ControlCenter"; }
+            { id = "NotificationHistory"; }
+          ];
+        };
+      };
     };
   };
 

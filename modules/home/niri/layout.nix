@@ -29,7 +29,7 @@
         border {
             off
             width 4
-            active-color "#ffc87f"
+            active-color "#f5f5f0"
             inactive-color "#505050"
             urgent-color "#9b0000"
         }

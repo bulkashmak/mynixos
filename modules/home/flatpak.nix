@@ -30,6 +30,7 @@
       "com.bitwarden.desktop"
       "md.obsidian.Obsidian"
       "com.obsproject.Studio"
+      "org.localsend.localsend_app"
 
       # Media
       "org.gnome.Showtime"

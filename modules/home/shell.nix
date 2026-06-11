@@ -10,12 +10,13 @@ in
     settings = {
       wallpaper = {
         enabled = true;
+        #default.path = "../../static/wallpapers/starship.jpg"
       };
 
       colorSchemes = {
         darkMode = true;
         # Generate a Material palette from the current wallpaper.
-        useWallpaperColors = true;
+        #useWallpaperColors = true;
       };
 
       bar = {

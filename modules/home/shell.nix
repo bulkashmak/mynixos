@@ -15,8 +15,12 @@ in
 
       colorSchemes = {
         darkMode = true;
-        # Generate a Material palette from the current wallpaper.
-        #useWallpaperColors = true;
+        # Use a fixed predefined scheme rather than deriving colors from the
+        # wallpaper.
+        useWallpaperColors = false;
+        # "Oxide" is a community scheme; Noctalia only finds it once its JSON is
+        # present under ~/.config/noctalia/colorschemes (see xdg.configFile below).
+        predefinedScheme = "Oxide";
       };
 
       bar = {
@@ -49,6 +53,13 @@ in
       };
     };
   };
+
+  # Noctalia scans ~/.config/noctalia/colorschemes for "downloaded" community
+  # schemes alongside its preinstalled ones. Vendor the Oxide scheme there so the
+  # `predefinedScheme = "Oxide"` setting above resolves without a manual download.
+  # The scan uses `find -L`, so a symlink into the nix store is picked up fine.
+  xdg.configFile."noctalia/colorschemes/Oxide/Oxide.json".source =
+    ../../static/noctalia/colorschemes/Oxide.json;
 
   # Noctalia stores the active wallpaper in a writable cache
   # (~/.cache/noctalia/wallpapers.json), not in settings.json, so there is no

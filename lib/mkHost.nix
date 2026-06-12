@@ -27,7 +27,6 @@ inputs.nixpkgs.lib.nixosSystem {
         sharedModules = [
           inputs.nix-flatpak.homeManagerModules.nix-flatpak
           inputs.noctalia.homeModules.default
-          inputs.vicinae.homeManagerModules.default
         ];
         users.${username} = {
           imports = [

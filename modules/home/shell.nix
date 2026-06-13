@@ -23,10 +23,13 @@ in
         predefinedScheme = "Oxide";
       };
 
-      bar = {
-        # Drop the drop-shadow rendered beneath the bar.
-        showShadow = false;
+      # Drop shadows under bars and panels. There is no per-bar shadow toggle in
+      # Noctalia (the old `bar.showShadow` key here was silently ignored — it
+      # isn't part of the schema); this global flag is what actually renders the
+      # shadow beneath the top bar. Disabling it also removes panel shadows.
+      general.enableShadows = false;
 
+      bar = {
         # Only `left` and `right` are overridden; `center` keeps its default
         # (the Workspace widget). Noctalia deep-merges declared settings onto
         # its defaults, so omitted keys fall back to the shipped values.

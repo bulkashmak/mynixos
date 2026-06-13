@@ -18,6 +18,7 @@
         Mod+N      hotkey-overlay-title="Toggle Noctalia Notification Center"   { spawn "noctalia-shell" "ipc" "call" "notifications" "toggleHistory"; }
         Mod+P      hotkey-overlay-title="Run an Application: Bitwarden"         { spawn "bitwarden" "--ozone-platform=wayland"; }
         Mod+A      hotkey-overlay-title="Run an Application: Bazaar"            { spawn "bazaar"; }
+        Mod+T      hotkey-overlay-title="Run an Application: Telegram"          { spawn "flatpak" "run" "org.telegram.desktop"; }
         Super+Ctrl+L hotkey-overlay-title="Lock the Screen: Noctalia Lock"      { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
         Super+Alt+S allow-when-locked=true hotkey-overlay-title=null            { spawn-sh "pkill orca || exec orca"; }
 

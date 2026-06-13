@@ -37,6 +37,7 @@ This is a NixOS flake configuration for a single host (`thinkpad`) using **niri*
 - `core.nix` — boot, zram swap, nix settings, base packages
 - `wm.nix` — enables niri + tuigreet login manager
 - `desktop-base.nix` — graphics, XDG portals, GNOME keyring, printing
+- `file-manager.nix` — Thunar (GTK3) + gvfs/tumbler. The one native GUI exception (see "GUI apps").
 - `flatpak.nix` — system-level flatpak runtime/dbus only; packages live in `modules/home/flatpak.nix`
 - `laptop.nix` — thermald, libinput touchpad, `power-profiles-daemon`. Don't add TLP — the two conflict.
 
@@ -64,6 +65,8 @@ Nix flakes only see git-tracked files. A new `.nix` file that isn't `git add`-ed
 ### GUI apps
 
 GUI applications are installed exclusively via Flatpak (`modules/nixos/flatpak.nix`). CLI tools and system services come from nixpkgs in the relevant module. Adding a new GUI app means adding its Flatpak ID to `services.flatpak.packages`.
+
+The one deliberate exception is the file manager (Thunar, `modules/nixos/file-manager.nix`): it's installed natively because Flatpak sandboxing breaks the gvfs/tumbler integration (mounts, trash, thumbnails, `xdg-open`) a file manager needs. Being GTK3, Thunar also honors the home-manager `gtk.theme` / `gtk.iconTheme` set in `modules/home/core.nix`, unlike libadwaita apps.
 
 ### Adding a new host
 

@@ -7,6 +7,12 @@
   };
 
   config.my.niri._kdl.windowRules = ''
+    // Global corner radius
+    window-rule {
+        geometry-corner-radius 12
+        clip-to-geometry true
+    }
+
     // Don't fill transparent windows with focus-ring/border color
     window-rule {
         draw-border-with-background false

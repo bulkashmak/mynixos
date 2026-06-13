@@ -31,14 +31,13 @@
       package = pkgs.materia-theme;
     };
     # Without an explicit icon theme, GTK falls back to hicolor (the ugly
-    # placeholder set). Papirus-Dark gives Nautilus a full icon set.
+    # placeholder set). Papirus-Dark gives Thunar a full icon set.
     iconTheme = {
       name = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
     };
-    # Modern Nautilus is GTK4/libadwaita and ignores the GTK theme above; it
-    # only follows the dark-mode preference. Set it for GTK3 and GTK4 so the
-    # whole stack renders dark to match the Noctalia (Oxide) dark scheme.
+    # Prefer dark for GTK3 (Thunar) and GTK4 so the whole stack renders dark to
+    # match the Noctalia (Oxide) dark scheme.
     gtk3.extraConfig.gtk-application-prefer-dark-theme = true;
     gtk4.extraConfig.gtk-application-prefer-dark-theme = true;
   };

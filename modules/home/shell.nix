@@ -38,17 +38,31 @@ in
             { id = "SystemMonitor"; }
             { id = "MediaMini"; }
           ];
-          # tray -> battery -> brightness -> volume -> control center -> notifications
+          # tray -> keyboard layout -> battery -> brightness -> volume -> control center -> notifications
           right = [
             { id = "Tray"; }
+            # Keyboard layout always rendered (forceOpen) and shown as text only
+            # (showIcon = false drops the leading keyboard glyph).
+            {
+              id = "KeyboardLayout";
+              displayMode = "forceOpen";
+              showIcon = false;
+            }
             # `graphic` keeps the default circular battery but renders the
             # percentage text inside it (default `graphic-clean` hides it).
             {
               id = "Battery";
               displayMode = "graphic";
             }
-            { id = "Brightness"; }
-            { id = "Volume"; }
+            # alwaysShow keeps the value label visible instead of only on hover.
+            {
+              id = "Brightness";
+              displayMode = "alwaysShow";
+            }
+            {
+              id = "Volume";
+              displayMode = "alwaysShow";
+            }
             { id = "ControlCenter"; }
             { id = "NotificationHistory"; }
           ];

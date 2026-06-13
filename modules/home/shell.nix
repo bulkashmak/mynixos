@@ -30,6 +30,10 @@ in
       general.enableShadows = false;
 
       bar = {
+        # Bar height is driven by the density preset (no raw pixel option):
+        # mini 21 · compact 25 · default 31 · comfortable 37 · spacious 47.
+        density = "comfortable";
+
         # Only `left` and `right` are overridden; `center` keeps its default
         # (the Workspace widget). Noctalia deep-merges declared settings onto
         # its defaults, so omitted keys fall back to the shipped values.

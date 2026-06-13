@@ -14,7 +14,7 @@
         Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty"              { spawn "ghostty"; }
         Mod+Space  hotkey-overlay-title="Run an Application: Noctalia Launcher" { spawn "noctalia-shell" "ipc" "call" "launcher" "toggle"; }
         Mod+E      hotkey-overlay-title="Run an Application: Nautilus"          { spawn "nautilus"; }
-        Mod+C      hotkey-overlay-title="Toggle Noctalia Control Center"        { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
+        Mod+S      hotkey-overlay-title="Toggle Noctalia Control Center"        { spawn "noctalia-shell" "ipc" "call" "controlCenter" "toggle"; }
         Mod+N      hotkey-overlay-title="Toggle Noctalia Notification Center"   { spawn "noctalia-shell" "ipc" "call" "notificationHistory" "toggle"; }
         Mod+P      hotkey-overlay-title="Run an Application: Bitwarden"         { spawn "bitwarden" "--ozone-platform=wayland"; }
         Mod+A      hotkey-overlay-title="Run an Application: Bazaar"            { spawn "bazaar"; }

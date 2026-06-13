@@ -31,10 +31,11 @@
       package = pkgs.materia-theme;
     };
     # Without an explicit icon theme, GTK falls back to hicolor (the ugly
-    # placeholder set). Papirus-Dark gives Thunar a full icon set.
+    # placeholder set). Fluent (green folder variant) gives Thunar a full,
+    # themed icon set; the dark variant matches the dark scheme.
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "Fluent-green-dark";
+      package = pkgs.fluent-icon-theme.override { colorVariants = [ "green" ]; };
     };
     # Prefer dark for GTK3 (Thunar) and GTK4 so the whole stack renders dark to
     # match the Noctalia (Oxide) dark scheme.

@@ -24,6 +24,9 @@ in
       };
 
       bar = {
+        # Drop the drop-shadow rendered beneath the bar.
+        showShadow = false;
+
         # Only `left` and `right` are overridden; `center` keeps its default
         # (the Workspace widget). Noctalia deep-merges declared settings onto
         # its defaults, so omitted keys fall back to the shipped values.

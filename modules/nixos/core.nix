@@ -45,6 +45,7 @@
     tmux
     git
     stow
+    just
     wl-clipboard
     brightnessctl
     playerctl

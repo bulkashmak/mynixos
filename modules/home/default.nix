@@ -6,7 +6,7 @@
     ./terminal.nix
     ./flatpak.nix
     ./shell.nix
-    ./vicinae.nix
+    ./yazi.nix
     ./starship
     ./lsd
     ./android

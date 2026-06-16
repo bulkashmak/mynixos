@@ -15,6 +15,9 @@
         skip-at-startup
     }
 
+    // Noctalia shell (bar, launcher, lock, notifications).
+    spawn-at-startup "noctalia-shell"
+
     // XWayland for X11-only apps (e.g. Bitwarden, Zoom flatpaks).
     spawn-at-startup "xwayland-satellite"
     environment {

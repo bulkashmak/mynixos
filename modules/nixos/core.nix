@@ -35,18 +35,23 @@
   security.polkit.enable = true;
   security.rtkit.enable = true;
 
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+    amneziawg
+  ];
+
   environment.systemPackages = with pkgs; [
     vim
     neovim
     tmux
     git
     stow
+    just
     wl-clipboard
     brightnessctl
     playerctl
     nodejs_24
-    nautilus
     xwayland-satellite
+    amneziawg-tools
   ];
 
   environment.sessionVariables = {

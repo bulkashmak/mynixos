@@ -24,18 +24,13 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     # Shell
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-    dms-plugins = {
-      url = "git+https://github.com/AvengeMedia/dms-plugin-registry";
+    noctalia = {
+      url = "git+https://github.com/noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # Other
     claude-code.url = "github:sadjow/claude-code-nix";
-    vicinae.url = "github:vicinaehq/vicinae";
   };
 
   outputs = inputs @ { self, nixpkgs, home-manager, ... }:

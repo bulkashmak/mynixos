@@ -22,14 +22,14 @@
 
         focus-ring {
             width 2
-            active-color "#ff4d00"
+            active-color "#b84f21"
             inactive-color "#505050"
         }
 
         border {
             off
             width 4
-            active-color "#ffc87f"
+            active-color "#f5f5f0"
             inactive-color "#505050"
             urgent-color "#9b0000"
         }

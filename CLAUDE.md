@@ -28,7 +28,7 @@ This is a NixOS flake configuration for a single host (`thinkpad`) using **niri*
 ### Entry points
 
 - `flake.nix` — declares all inputs and calls `lib/mkHost.nix` per host
-- `lib/mkHost.nix` — the wiring layer: composes nixpkgs, home-manager, third-party modules (`niri-flake`, `nix-flatpak`, `disko`, `dms`), and the host-specific directory
+- `lib/mkHost.nix` — the wiring layer: composes nixpkgs, home-manager, third-party modules (`niri-flake`, `nix-flatpak`, `disko`, `noctalia`), and the host-specific directory
 - `hosts/thinkpad/` — hardware config, disko partition layout, and per-host home settings (monitor outputs)
 
 ### Module layers
@@ -37,13 +37,14 @@ This is a NixOS flake configuration for a single host (`thinkpad`) using **niri*
 - `core.nix` — boot, zram swap, nix settings, base packages
 - `wm.nix` — enables niri + tuigreet login manager
 - `desktop-base.nix` — graphics, XDG portals, GNOME keyring, printing
+- `file-manager.nix` — Thunar (GTK3) + gvfs/tumbler. The one native GUI exception (see "GUI apps").
 - `flatpak.nix` — system-level flatpak runtime/dbus only; packages live in `modules/home/flatpak.nix`
-- `laptop.nix` — thermald, libinput touchpad. Power profiles are managed by `power-profiles-daemon` (enabled by DMS), not TLP — the two conflict.
+- `laptop.nix` — thermald, libinput touchpad, `power-profiles-daemon`. Don't add TLP — the two conflict.
 
 **`modules/home/`** — home-manager modules, all unconditionally imported:
 - `core.nix` — git, starship, GTK/Qt theming, cursor, claude-code package
 - `terminal.nix` — Ghostty terminal (GruvboxDark, JetBrainsMono Nerd Font)
-- `shell.nix` — DankMaterialShell (DMS), the Wayland desktop shell (bar, launcher, lock, notifications) for niri
+- `shell.nix` — Noctalia, the Wayland desktop shell (bar, launcher, lock, notifications) for niri
 - `flatpak.nix` — declarative per-user Flatpak via `nix-flatpak` (`uninstallUnmanaged = true`, auto-updates weekly)
 - `niri/` — niri config split into KDL sections (`input`, `layout`, `binds`, `window-rules`, `animations`, `misc`), assembled in `default.nix`
 
@@ -55,7 +56,7 @@ The `my.niri` home-manager option (defined in `modules/home/niri/default.nix`) e
 
 ### Pulling packages from nixpkgs-unstable
 
-Some DMS dependencies (e.g. `dgop`) aren't in nixpkgs 25.11. The pattern in `modules/home/shell.nix` instantiates `nixpkgs-unstable` inline and feeds the unstable derivation into the relevant DMS option (`programs.dank-material-shell.<thing>.package`). Repeat that pattern for any further missing-on-stable DMS packages rather than upgrading the whole system to unstable.
+`nixpkgs-unstable` is wired up as a flake input for cases where a stable-channel derivation is missing or too old. To use it, instantiate it inline in the relevant module (see prior history of `modules/home/shell.nix` for the pattern) and feed the unstable derivation into the relevant `package` option, rather than upgrading the whole system to unstable.
 
 ### Flake gotcha: untracked files are invisible
 
@@ -64,6 +65,8 @@ Nix flakes only see git-tracked files. A new `.nix` file that isn't `git add`-ed
 ### GUI apps
 
 GUI applications are installed exclusively via Flatpak (`modules/nixos/flatpak.nix`). CLI tools and system services come from nixpkgs in the relevant module. Adding a new GUI app means adding its Flatpak ID to `services.flatpak.packages`.
+
+The one deliberate exception is the file manager (Thunar, `modules/nixos/file-manager.nix`): it's installed natively because Flatpak sandboxing breaks the gvfs/tumbler integration (mounts, trash, thumbnails, `xdg-open`) a file manager needs. Being GTK3, Thunar also honors the home-manager `gtk.theme` / `gtk.iconTheme` set in `modules/home/core.nix`, unlike libadwaita apps.
 
 ### Adding a new host
 

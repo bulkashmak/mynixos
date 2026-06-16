@@ -78,6 +78,17 @@ in
     };
   };
 
+  # Noctalia's GTK app-theming rewrites ~/.config/gtk-4.0/gtk.css (replacing the
+  # symlink home-manager's `gtk.theme` installs with a regular file that appends
+  # `@import "noctalia.css"`). On the next rebuild HM sees that unmanaged file and
+  # backs it up to gtk.css.hm-bak (backupFileExtension in lib/mkHost.nix). If a
+  # .hm-bak from a previous such cycle is still there, HM refuses to clobber it and
+  # activation fails. Clearing the stale backup before the collision check makes
+  # rebuilds idempotent: each run backs up Noctalia's current gtk.css afresh.
+  home.activation.clearGtkCssBackup = lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
+    rm -f "$HOME/.config/gtk-4.0/gtk.css.hm-bak"
+  '';
+
   # Noctalia scans ~/.config/noctalia/colorschemes for "downloaded" community
   # schemes alongside its preinstalled ones. Vendor the Oxide scheme there so the
   # `predefinedScheme = "Oxide"` setting above resolves without a manual download.

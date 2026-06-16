@@ -44,6 +44,10 @@
           hostname = "thinkpad";
           username = "bulat";
         };
+        formd = mkHost {
+          hostname = "formd";
+          username = "bulat";
+        };
       };
     };
 }

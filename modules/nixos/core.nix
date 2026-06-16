@@ -49,7 +49,6 @@
     wl-clipboard
     brightnessctl
     playerctl
-    nodejs_24
     xwayland-satellite
     amneziawg-tools
   ];

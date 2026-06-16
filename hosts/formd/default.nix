@@ -4,6 +4,6 @@
     ./disko.nix
   ];
 
-  my.laptop.enable = true;
+  my.gaming.enable = true;
   my.dev.enable = true;
 }

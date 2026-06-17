@@ -58,7 +58,7 @@
   };
 
   home.packages = [
-    jetbrains.idea
+    pkgs.jetbrains.idea
     inputs.claude-code.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

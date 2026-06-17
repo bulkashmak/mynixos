@@ -58,6 +58,7 @@
   };
 
   home.packages = [
+    pkgs.mission-center
     pkgs.jetbrains.idea
     inputs.claude-code.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];

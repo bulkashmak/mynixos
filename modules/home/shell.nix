@@ -1,9 +1,16 @@
-{ lib, ... }:
+{ config, lib, ... }:
 
 let
-  wallpaper = ../../static/wallpapers/starship.jpg;
+  wallpaper = config.my.noctalia.wallpaper;
 in
 {
+  options.my.noctalia.wallpaper = lib.mkOption {
+    type = lib.types.path;
+    default = ../../static/wallpapers/starship.jpg;
+    description = "Wallpaper pushed to Noctalia at startup via IPC.";
+  };
+
+  config = {
   programs.noctalia-shell = {
     enable = true;
 
@@ -105,4 +112,5 @@ in
   my.niri.extraConfig = ''
     spawn-at-startup "sh" "-c" "for i in $(seq 30); do noctalia-shell ipc call wallpaper set ${toString wallpaper} all && break; sleep 1; done"
   '';
+  };
 }

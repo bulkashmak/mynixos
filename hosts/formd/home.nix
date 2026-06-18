@@ -1,6 +1,8 @@
 { config, lib, ... }:
 
 {
+  my.noctalia.wallpaper = ../../static/wallpapers/hailmary-red.jpg;
+
   # Per-host niri output declarations. Captured from `niri msg outputs` on
   # the live formd setup: Gigabyte M27Q X (DP-2, 1440p240) as primary, with
   # a Stargate SIDETRAK portable (HDMI-A-1, 1080p60) docked to its right.

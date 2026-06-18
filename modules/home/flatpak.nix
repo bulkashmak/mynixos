@@ -1,3 +1,5 @@
+{ lib, osConfig, ... }:
+
 {
   services.flatpak = {
     update.auto = {
@@ -32,9 +34,36 @@
       "com.obsproject.Studio"
       "org.localsend.localsend_app"
 
+      # Editors / Dev
+      "dev.zed.Zed"
+      "com.visualstudio.code"
+      "io.beekeeperstudio.Studio"
+      "com.github.marhkb.Pods"
+
       # Media
       "org.gnome.Showtime"
       "org.gnome.Decibels"
+      "org.videolan.vlc"
+      "com.github.neithern.g4music"
+      "com.rafaelmardojai.Blanket"
+      "org.gnome.gitlab.YaLTeR.VideoTrimmer"
+
+      # Graphics / Photo
+      "org.gimp.GIMP"
+      "com.github.PintaProject.Pinta"
+      "com.rawtherapee.RawTherapee"
+      "com.github.huluti.Curtail"
+
+      # Audio
+      "com.github.Flacon"
+
+      # Utilities
+      "org.qbittorrent.qBittorrent"
+      "com.usebottles.bottles"
+    ] ++ lib.optionals (osConfig.my.gaming.enable or false) [
+      # Gaming launchers — installed only when the gaming bundle is on
+      "com.heroicgameslauncher.hgl"
+      "net.lutris.Lutris"
     ];
   };
 }

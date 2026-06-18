@@ -17,6 +17,12 @@
     };
   };
 
+  xdg.portal = {
+  	enable = true;
+	extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+	config.common.default = "*";
+  };
+
   home.pointerCursor = {
     gtk.enable = true;
     name = "capitaine-cursors";

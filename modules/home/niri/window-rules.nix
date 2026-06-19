@@ -18,16 +18,10 @@
         draw-border-with-background false
     }
 
-    // Zoom: float small popup windows, keep main meeting unfloated
+    // Zoom: float everything by default (catches all the small popups),
+    // then un-float only the main meeting/settings windows below.
     window-rule {
-        match app-id="zoom" title="^zoom$"
-        match app-id="zoom" title="as_toolbar"
-        match app-id="zoom" title="as_taskbar"
-        match app-id="zoom" title="^Zoom$"
-        match app-id="zoom" title="meeting_controls"
-        match app-id="zoom" title="notification"
-        match app-id="zoom" title="^pop_up_wnd$"
-
+        match app-id="zoom"
         open-floating true
     }
 

@@ -18,11 +18,10 @@
     // Noctalia shell (bar, launcher, lock, notifications).
     spawn-at-startup "noctalia-shell"
 
-    // XWayland for X11-only apps (e.g. Bitwarden, Zoom flatpaks).
-    spawn-at-startup "xwayland-satellite"
-    environment {
-        DISPLAY ":0"
-    }
+    // XWayland for X11-only apps (e.g. Bitwarden, Zoom flatpaks) is started and
+    // managed by niri itself (it spawns xwayland-satellite via socket activation
+    // and sets DISPLAY automatically). Do NOT also spawn it here or hardcode
+    // DISPLAY — a second instance races for :0 and breaks clipboard sync.
 
     workspace "1"
     workspace "2"

@@ -47,6 +47,13 @@
         open-floating true
     }
 
+    // Open Zen browser and Slack maximized (full column width)
+    window-rule {
+        match app-id=r#"zen$"#
+        match app-id=r#"^com\.slack\.Slack$"#
+        open-maximized true
+    }
+
     // Workaround WezTerm's initial-configure bug
     window-rule {
         match app-id=r#"^org\.wezfurlong\.wezterm$"#

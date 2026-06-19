@@ -7,6 +7,16 @@
       onCalendar = "weekly";
     };
     uninstallUnmanaged = true;
+    overrides.settings = {
+      # The Bitwarden flatpak wrapper forces `--ozone-platform=x11` unless
+      # USE_X11=false, so by default it runs under XWayland and its clipboard
+      # must be bridged through xwayland-satellite — which breaks copy/paste.
+      # Force native Wayland instead, so it uses the Wayland clipboard directly.
+      "com.bitwarden.desktop".Environment = {
+        USE_X11 = "false";
+        ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+      };
+    };
     remotes = [
       {
         name = "flathub";

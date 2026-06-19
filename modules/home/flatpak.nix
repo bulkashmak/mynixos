@@ -53,7 +53,7 @@
       # Media
       "org.gnome.Showtime"
       "org.gnome.Decibels"
-      "org.videolan.vlc"
+      "org.videolan.VLC"
       "com.github.neithern.g4music"
       "com.rafaelmardojai.Blanket"
       "org.gnome.gitlab.YaLTeR.VideoTrimmer"

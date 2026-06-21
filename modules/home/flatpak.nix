@@ -63,6 +63,7 @@
       "com.github.PintaProject.Pinta"
       "com.rawtherapee.RawTherapee"
       "com.github.huluti.Curtail"
+      "org.gnome.Loupe"
 
       # Audio
       "com.github.Flacon"

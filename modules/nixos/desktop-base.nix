@@ -3,10 +3,6 @@
 {
   hardware.graphics.enable = true;
 
-  # Zoom is a native package rather than a Flatpak: the Flatpak sandbox's
-  # portal/Wayland screen-share path is unreliable under niri.
-  environment.systemPackages = [ pkgs.zoom-us ];
-
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [

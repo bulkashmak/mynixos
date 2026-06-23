@@ -30,7 +30,6 @@
 
       # Web
       "app.zen_browser.zen"
-      "us.zoom.Zoom"
       "de.haeckerfelix.Fragments"
 
       # Social

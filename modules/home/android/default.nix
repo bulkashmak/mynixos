@@ -27,6 +27,7 @@ in
     androidSdk
     jdk
     marathon
+    android-studio
   ];
 
   home.sessionVariables = {

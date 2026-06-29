@@ -1,6 +1,11 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 let
+  unstable = import inputs.nixpkgs-unstable {
+    inherit (pkgs) system;
+    config.allowUnfree = true;
+  };
+
   jdk = pkgs.jdk21;
 
   androidComposition = pkgs.androidenv.composeAndroidPackages {
@@ -27,6 +32,7 @@ in
     androidSdk
     jdk
     marathon
+    unstable.android-studio
   ];
 
   home.sessionVariables = {

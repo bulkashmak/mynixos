@@ -27,7 +27,6 @@ in
     androidSdk
     jdk
     marathon
-    pkgs.android-studio
   ];
 
   home.sessionVariables = {
